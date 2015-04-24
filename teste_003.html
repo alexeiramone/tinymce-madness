@@ -48,7 +48,7 @@ tinymce.init({
     keep_styles: false,
     language: 'pt_BR',
     object_resizing: false,
-    plugins: 'advlist anchor autosave charmap code contextmenu hr image link lists media noneditable paste preview searchreplace table template visualblocks visualchars',
+    plugins: 'advlist autosave charmap code contextmenu hr image link lists media noneditable paste preview searchreplace table template visualblocks visualchars',
     tools: 'inserttable visualchars',
     contextmenu: "link image inserttable | cell row column deletetable | mycustomblock",
     // image
@@ -112,12 +112,14 @@ tinymce.init({
     verify_html: true,
 
     // URL
-    relative_urls: false,
+    relative_urls: true,
     remove_script_host: true,
+    document_base_url: '/'
 
     // Layout
     width: 758,
     height: 300,
+    resize: true,
     indentation: '10px',
     
     // Content CSS
@@ -126,24 +128,24 @@ tinymce.init({
     
     toolbar: [
         'formatselect styleselect | bold italic underline | bullist numlist blockquote hr | alignleft aligncenter alignright | undo redo | link unlink | image | fullscreen',
-        'search | pasteword template media charmap | code | table cleanup grappelli_documentstructure |anchor',
-        'grappelli_adv'
+        'search | cut copy paste pastetext template media charmap code | table cleanup',
+        'grappelli_adv grappelli_documentstructure'
         ],
 
     // Templates
     // see http://www.tinymce.com/wiki.php/Plugin:template
     // please note that you need to add the URLs (src) to your url-patterns
     // with django.views.generic.simple.direct_to_template
-    template_templates : [
+    templates : [
         {
-            title : '2 Columns',
-            src : '/path/to/your/template/',
-            description : '2 Columns.'
+            title : 'Imagem com Caption',
+            url : '/template_001.html',
+            description : 'Imagem'
         },
         {
-            title : '4 Columns',
-            src : '/path/to/your/template/',
-            description : '4 Columns.'
+            title : 'Bunda',
+            content: 'ddd',
+            description : 'Teste'
         }
     ],
 
