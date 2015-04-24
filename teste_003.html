@@ -109,22 +109,27 @@ tinymce.init({
         {title: 'Clearfix', block : 'p', classes: 'clearfix'},
         {title: 'Code', block : 'p', classes: 'code'}
     ],
-    verify_html: true,
+
+    // Deprecated Options
+    // verify_html: true,
+    // theme_advanced_styles: 'Image Left=img_left;Image Right=img_right;Image Block=img_block',
+    // advimage_update_dimensions_onchange: true,
+    // advlink_styles: 'Internal Link=internal;External Link=external',
 
     // URL
     relative_urls: true,
     remove_script_host: true,
-    document_base_url: '/'
+    document_base_url: '/',
 
     // Layout
-    width: 758,
+    width: 820,
     height: 300,
     resize: true,
     indentation: '10px',
     
     // Content CSS
     // customize your content ...
-    // content_css : "css/example.css",
+    content_css : "content_css.css",
     
     toolbar: [
         'formatselect styleselect | bold italic underline | bullist numlist blockquote hr | alignleft aligncenter alignright | undo redo | link unlink | image | fullscreen',
@@ -149,19 +154,7 @@ tinymce.init({
         }
     ],
 
-    // Image Plugin
-    // see http://www.tinymce.com/wiki.php/Plugin:advimage
-    theme_advanced_styles: 'Image Left=img_left;Image Right=img_right;Image Block=img_block',
-    advimage_update_dimensions_onchange: true,
-    
-    // Link Settings
-    // see http://www.tinymce.com/wiki.php/Plugin:advlink
-    advlink_styles: 'Internal Link=internal;External Link=external',
-
-    // Media Plugin
-    // see http://www.tinymce.com/wiki.php/Plugin:media
-    media_strict: true,
-    
+       
     // Grappelli Settings
     grappelli_adv_hidden: false,
     grappelli_show_documentstructure: 'on'
